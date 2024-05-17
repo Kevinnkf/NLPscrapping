@@ -2,9 +2,14 @@ import PyPDF2
 import re
 import pandas as pd
 from textblob import TextBlob
+from textblob import Word
 import nltk
 from nltk.corpus import stopwords
+import pandas as pd
+import spacy
+import spacy_stanza
 
+nlp = spacy_stanza.load_pipeline("id")  # Load the model
 text = ""
 
 # Function to extract text from PDF
@@ -48,14 +53,17 @@ def correctedTypos(text):
     return df
 
 # Function to find all common words
-def removeStopWords():
+def removeStopWords(text):
     df = pd.DataFrame({'Peraturan': text})
     stop = stopwords.words('indonesia')
     df['Peraturan'] = df['Peraturan'].apply(lambda x: "".join(x for x in x.split() if x not in stop))
+    return df['Peraturan']
 
-
-
-
+# Function to lemmatize words
+def lemmatization(text):
+    df = pd.DataFrame({'Peraturan': text})
+    df['Peraturan'] = df['Peraturan'].apply(lambda x: " ".join([token.lemma_ for token in nlp(x)]))
+    return df['Peraturan']
 
 
 # Calling the extract text function
@@ -67,7 +75,20 @@ classified_text = classifyPasal(pdf_text)
 # Correct typos in classified text
 corrected_text_df = correctedTypos(classified_text)
 
-#for index, row in corrected_text_df.iterrows():
-#   print(row['Peraturan'])
+# Print the classified text
+print("Classified Text:")
+for section in classified_text:
+    print(section)
 
-print(corrected_text_df.shape)
+# Print the corrected text
+print("\nCorrected Text:")
+for index, row in corrected_text_df.iterrows():
+    print(row['Peraturan'])
+
+# Print the text after removing stopwords
+print("\nText after removing stopwords:")
+print(removeStopWords(classified_text))
+
+# Print the lemmatized text
+print("\nLemmatized Text:")
+print(lemmatization(classified_text))
