@@ -9,8 +9,8 @@ import pandas as pd
 import spacy
 import spacy_stanza
 
-nlp = spacy_stanza.load_pipeline("id")  # Load the model
-text = ""
+# nlp = spacy_stanza.load_pipeline("id")  # Load the model
+text = ""   
 
 # Function to extract text from PDF
 def extract_text_from_pdf(pdf_path, exclude_patterns = None):
@@ -34,16 +34,27 @@ def extract_text_from_pdf(pdf_path, exclude_patterns = None):
 
 # Function to classify the text based on pasal
 def classifyPasal(text):
-    # Split the text into sections based on occurrences
-    sections = re.split(r'pasal \d+', text, flags=re.IGNORECASE)
+    # Split the text into sections based on occurrences of "pasal"
+    sections = re.split(r'(\bPasal \d+\b)', text, flags=re.IGNORECASE)
     
-    # Filter out empty sections
-    sections = [section.strip() for section in sections if section.strip()]
+    # Initialize lists to hold "Pasal" and "isi"
+    pasals = []
+    contents = []
     
-    for i in range(1, len(sections)):
-        sections[i] = "Pasal " + re.search(r'\d+', sections[i-1], flags=re.IGNORECASE).group() + sections[i]
-
-    return sections
+    # Iterate through the sections and classify them
+    for i in range(1, len(sections), 2):
+        pasal = sections[i].strip()  # Get the "Pasal"
+        isi = sections[i + 1].strip() if (i + 1) < len(sections) else ''  # Get the content
+        pasals.append(pasal)
+        contents.append(isi)
+    
+    # Create a DataFrame
+    df = pd.DataFrame({
+        'pasal': pasals,
+        'isi': contents
+    })
+    
+    return df
 
 # Function to find all typos
 def correctedTypos(text):
@@ -67,28 +78,35 @@ def lemmatization(text):
 
 
 # Calling the extract text function
-pdf_text = extract_text_from_pdf("C:/Users/khalf/Code/NLP/Undang-Undang Nomor 1 Tahun 20230.pdf", exclude_patterns=["Presiden Republik Indonesia", "SK No 16003 A"])
+pdf_text = extract_text_from_pdf("C:/Users/khalf/Code/NLP/draft_ruu_kuhp_final.pdf", "")
+# ?print(pdf_text)
 
 # Classifying all the text based on pasal
 classified_text = classifyPasal(pdf_text)
+print(classified_text.head)
 
-# Correct typos in classified text
-corrected_text_df = correctedTypos(classified_text)
 
-# Print the classified text
-print("Classified Text:")
-for section in classified_text:
-    print(section)
 
-# Print the corrected text
-print("\nCorrected Text:")
-for index, row in corrected_text_df.iterrows():
-    print(row['Peraturan'])
 
-# Print the text after removing stopwords
-print("\nText after removing stopwords:")
-print(removeStopWords(classified_text))
+# # Correct typos in classified text
+# corrected_text_df = lemmatization(classified_text)
 
-# Print the lemmatized text
-print("\nLemmatized Text:")
-print(lemmatization(classified_text))
+# print(classified_text)
+
+# # Print the classified text
+# print("Classified Text:")
+# for section in classified_text:
+#     print(section)
+
+# # Print the corrected text
+# print("\nCorrected Text:")
+# for index, row in corrected_text_df.iterrows():
+#     print(row['Peraturan'])
+
+# # Print the text after removing stopwords
+# print("\nText after removing stopwords:")
+# print(removeStopWords(classified_text))
+
+# # Print the lemmatized text
+# print("\nLemmatized Text:")
+# print(lemmatization(classified_text))
