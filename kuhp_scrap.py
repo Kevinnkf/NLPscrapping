@@ -53,8 +53,34 @@ def classifyPasal(text):
         'pasal': pasals,
         'isi': contents
     })
+
+    # Apply transformations
+    df['pasal'] = df['pasal'].apply(lambda x: " ".join(x.lower() for x in x.split()))
+    df['isi'] = df['isi'].apply(lambda x: " ".join(x.lower() for x in x.split()))
     
     return df
+
+    
+    
+
+# def classify_Bab(text):
+#     # Create a DataFrame
+
+#     # penjara = 
+#     # tutupan = 
+#     # denda = 
+#     # pengawasan = 
+#     # kerja_sosial = 
+
+
+#     df = pd.DataFrame({
+#         'Penjara': penjara,
+#         'Tutupan': tutupan,
+#         'Denda': denda,
+#         'Pengawasan': pengawasan,
+#         'Kerja_Sosial': kerja_sosial
+#         })
+#     })
 
 # Function to find all typos
 def correctedTypos(text):
@@ -76,6 +102,15 @@ def lemmatization(text):
     df['Peraturan'] = df['Peraturan'].apply(lambda x: " ".join([token.lemma_ for token in nlp(x)]))
     return df['Peraturan']
 
+# # lowercasing
+# def lowercasing(text):
+#     df = pd.DataFrame({
+#         'pasal': pasals,
+#         'isi': contents
+#     })
+#     df['pasal'] = df['pasal'].apply(lambda x: "".join(x.lower() for x in x.split()))
+#     return df['pasal']
+
 
 # Calling the extract text function
 pdf_text = extract_text_from_pdf("C:/Users/khalf/Code/NLP/draft_ruu_kuhp_final.pdf", "")
@@ -84,29 +119,3 @@ pdf_text = extract_text_from_pdf("C:/Users/khalf/Code/NLP/draft_ruu_kuhp_final.p
 # Classifying all the text based on pasal
 classified_text = classifyPasal(pdf_text)
 print(classified_text.head)
-
-
-
-
-# # Correct typos in classified text
-# corrected_text_df = lemmatization(classified_text)
-
-# print(classified_text)
-
-# # Print the classified text
-# print("Classified Text:")
-# for section in classified_text:
-#     print(section)
-
-# # Print the corrected text
-# print("\nCorrected Text:")
-# for index, row in corrected_text_df.iterrows():
-#     print(row['Peraturan'])
-
-# # Print the text after removing stopwords
-# print("\nText after removing stopwords:")
-# print(removeStopWords(classified_text))
-
-# # Print the lemmatized text
-# print("\nLemmatized Text:")
-# print(lemmatization(classified_text))
