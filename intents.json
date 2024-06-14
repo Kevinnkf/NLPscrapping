@@ -13,7 +13,7 @@
             ],
             "responses": [
                 "Halo, ada yang bisa kami bantu?",
-                "Selamat datang di LegalScope! ada yang bisa kami bantu?",
+                "Selamat datang di LegalScope! ada yang bisa kami bantu?"
             ],
             "context": [""]
         },
@@ -26,8 +26,8 @@
             ],
             "responses": [
                 "Sampai jumpa lagi!",
-                "Semoga harimu menyenangkan",
-                "Terimkasih telah bertanya, sampai jumpa lagi"
+                "Semoga hari mu menyenangkan",
+                "Terimakasih telah bertanya, sampai jumpa lagi"
             ],
             "context": [""]
         },
@@ -63,11 +63,11 @@
         {
             "tag": "prinsip_penyusunan_kuhp",
             "patterns": [
-                "Prinsip dasar penyusunan KUHP?",
-                "Jelaskan prinsip dasar penyusunan KUHP",
-                "Apa saja prinsip dasar penyusunan KUHP?",
-                "Prinsip yang mendasari penyusunan KUHP",
-                "Apa saja prinsip-prinsip dasar yang mendasari penyusunan KUHP ini?"
+                "Prinsip dasar penyusunan hukum pidana KUHP?",
+                "Jelaskan prinsip dasar penyusunan hukum pidana KUHP",
+                "Apa saja prinsip dasar penyusunan hukum pidana KUHP?",
+                "Prinsip yang mendasari penyusunan hukum pidana KUHP",
+                "Apa saja prinsip-prinsip dasar yang mendasari penyusunan hukum pidana KUHP ini?"
             ],
             "responses":[
                 
@@ -77,14 +77,573 @@
         {
             "tag": "ruang_lingkup_ketentuan_waktu_kuhp",
             "patterns": [
-                "Ruang lingkup berlakunya ketentuan peraturan KUHP",
-                "Jelaskan ruang lingkup ketentuan peraturan KUHP",
-                ""
+                "Ruang lingkup berlakunya ketentuan peraturan hukum pidana KUHP menurut waktu",
+                "Jelaskan ruang lingkup ketentuan peraturan hukum pidana KUHP menurut waktu",
+                "Bagaimana ruang lingkup berlakunya ketentuan peraturan perundang-undangan pidana menurut waktu?",
+                "Ketentuan berlakunya hukum pidana KUHP menurut waktu"
             ],
             "responses":[
 
             ],
             "context":[""]
         },
+        {
+            "tag": "asas_wilayah_teritorial_kuhp",
+            "patterns": [
+                "Asas wilayah atau teritorial hukum pidana KUHP",
+                "Jelaskan asas wilayah atau teritorial hukum pidana KUHP",
+                "Apa yang dimaksud dengan asas wilayah atau teritorial dalam hukum pidana KUHP?",
+                "Definisi asas wilayah atau teritorial hukum pidana KUHP"
+            ],
+            "responses":[
+
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pasal2_hukum_masyarakat",
+            "patterns": [
+                "Ketentuan pasal 2 hukum pidana KUHP yang mengatur tentang hukum yang hidup dalam masyarakat",
+                "Isi pasal 2 hukum pidana KUHP",
+                "Isi pasal 2 ayat 1 hukum pidana KUHP",
+                "Isi pasal 2 ayat 2 hukum pidana KUHP",
+                "Jelaskan pasal dalam hukum pidana KUHP tentang hukum yang hidup dalam masyarakat",
+                "Bagaimana ketentuan dalam Pasal 2 ayat (1) dan (2) dalam hukum pidana KUHP yang mengatur tentang hukum yang hidup dalam masyarakat?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "perubahan_peraturan_perundang_undangan",
+            "patterns": [
+                "Apa yang terjadi jika terdapat perubahan peraturan perundang-undangan setelah suatu perbuatan dilakukan?",
+                "Bagaimana jika peraturan perundang-undangan dirubah setelah suatu perbuatan dilakukan?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "asas_pelindungan_asas_nasional_pasif_kuhp",
+            "patterns": [
+                "Definisi asas pelindungan dalam hukum pidana KUHP",
+                "Definisi asas nasional pasif dalam hukum pidana KUHP",
+                "Jelaskan asas pelindungan dalam hukum pidana KUHP",
+                "Jelaskan asas nasional pasif dalam hukum pidana KUHP",
+                "Apa yang dimaksud dengan asas pelindungan dan asas nasional pasif dalam KUHP?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "asas_nasional_aktif_warga_negara_tindak_pidana_luar_negeri_kuhp",
+            "patterns": [
+                "Bagaimana asas nasional aktif menurut hukum pidana KUHP bagi warga negara Indonesia yang melakukan kejahatan tindak pidana di luar negeri?",
+                "Ketentuan asas nasional aktif menurut hukum pidana KUHP bagi warga negara Indonesia di luar negeri",
+                "Jelaskan ketentuan asas nasional aktif bagi warga negara Indonesia yang melakukan kejahatan pidana di luar negeri",
+                "Asas nasional aktif bagi warga negara Indonesia yang melakukan kejahatan atau tindak pidana diluar negeri"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "definisi_tindak_pidana_kuhp",
+            "patterns": [
+                "Definisi tindak pidana menurut KUHP",
+                "Apa definisi tindak pidana menurut KUHP",
+                "Tindak pidana menurut KUHP",
+                "Jelaskan definisi tindak pidana menurut KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pemufakatan_jahat_kuhp",
+            "patterns": [
+                "Pemufakatan jahat menurut hukum pidana KUHP",
+                "Bagaimana permufakatan jahat diatur dalam KUHP?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "persiapan_tindak_pidana_kuhp",
+            "patterns": [
+                "Apa saja yang termasuk dalam persiapan melakukan tindak pidana?",
+                "Jelaskan hal yang termasuk dalam persiapan melakukan tindak pidana",
+                "Hal yang termasuk dalam persiapan melakukan tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "percobaan_tindak_pidana_kuhp",
+            "patterns": [
+                "Bagaimana hukum pidana KUHP mengatur tentang percobaan melakukan tindak pidana?",
+                "Percobaan melakukan tindak pidana menurut hukum pidana KUHP",
+                "Jelaskan peraturan mengenai percobaan melakukan tindak pidana menurut hukum pidana KUHP",
+                "Percobaan melakukan tindak pidana menurut hukum pidana KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pasal20_pelaku_tindak_pidana_kuhp",
+            "patterns": [
+                "Pelaku tindak pidana menurut Pasal 20 hukum pidana KUHP",
+                "Yang dipidana sebagai pelaku tindak pidana menurut Pasal 20 hukum pidana KUHP",
+                "Siapa saja yang dapat dipidana sebagai pelaku tindak pidana menurut Pasal 20?",
+                "Jelaskan pelaku terpidana menurut Pasal 20 hukum pidana KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pembantuan_tindak_pidana_kuhp",
+            "patterns": [
+                "Peraturan yang mengatur mengenai pembantuan dalam melakukan tindak pidana",
+                "Jelaskan peraturan yang mengatur mengenai pembantuan dalam melakukan tindak pidana",
+                "Bagaimana aturan mengenai pembantuan dalam melakukan tindak pidana?",
+                "Pembantuan dalam melakukan tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pengulangan_tindak_pidana_kuhp",
+            "patterns": [
+                "Peraturan yang mengatur mengenai pengulangan tindak pidana",
+                "Jelaskan peraturan yang mengatur mengenai pengulangan tindak pidana",
+                "Bagaimana aturan mengenai pengulangan tindak pidana?",
+                "Bagaimana KUHP mengatur tentang pengulangan tindak pidana?",
+                "Pengulangan melakukan tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "jenis_sanksi_pidana_kuhp",
+            "patterns": [
+                "Jelaskan jenis sanksi pidana yang diatur dalam hukum pidana KUHP",
+                "Jenis sanksi pidana menurut hukum pidana KUHP",
+                "Apa saja jenis sanksi pidana yang diatur dalam KUHP?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pembebasan_pelaku_perubahan_peraturan_kuhp",
+            "patterns": [
+                "Bagaimana pembebasan pelaku tindak pidana diatur jika terjadi perubahan peraturan yang menguntungkan pelaku?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pasal5_tindak_pidana_kuhp",
+            "patterns": [
+                "Peraturan tindak pidana di luar wilayah Indonesia",
+                "Bagaimana hukum pidana KUHP mengatur tindak pidana di luar wilayah Indonesia",
+                "Apa yang diatur dalam Pasal 5 hukum pidana KUHP mengenai tindak pidana di luar wilayah Indonesia?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "tindak_pidana_korupsi_kuhp",
+            "patterns": [
+                "Peraturan mengenai tindak pidana korupsi",
+                "Bagaimana KUHP mengatur tentang tindak pidana korupsi?",
+                "Jelaskan mengenai peraturan tindakan korupsi dalam hukum pidana KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "tindak_pidana_terorisme_kuhp",
+            "patterns": [
+                "Peraturan mengenai tindak pidana terorisme",
+                "Bagaimana KUHP mengatur tentang tindak pidana terorisme?",
+                "Jelaskan mengenai peraturan tindakan terorisme dalam hukum pidana KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "tindak_pidana_terhadap_anak_kuhp",
+            "patterns": [
+                "Peraturan mengenai tindak pidana terhadap anak",
+                "Bagaimana KUHP mengatur tentang tindak pidana terhadap anak?",
+                "Jelaskan mengenai peraturan tindakan pidana terhadap anak dalam hukum pidana KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "tindak_pidana_lingkungan_hidup_kuhp",
+            "patterns": [
+                "Peraturan mengenai tindak pidana lingkungan hidup",
+                "Bagaimana KUHP mengatur tentang tindak pidana dalam lingkungan hidup?",
+                "Jelaskan mengenai peraturan tindakan pidana dalam lingkungan hidup menurut hukum pidana KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "perlindungan_ham_kuhp",
+            "patterns": [
+                "Bagaimana KUHP memastikan perlindungan hak asasi manusia dalam proses penegakan hukum pidana?",
+                "Jelaskan perlindungan hak asasi manusia dalam hukum pidana",
+                "Perlindungan hak asasi manusia menurut hukum pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "hak_tersangka_terdakwa_kuhp",
+            "patterns": [
+                "Hak-hak tersangka atau terdakwa dalam hukum pidana KUHP",
+                "Hak-hak tersangka dalam hukum pidana KUHP",
+                "Hak-hak terdakwa dalam hukum pidana KUHP",
+                "Bagaimana pengaturan mengenai hak-hak tersangka atau terdakwa dalam KUHP?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "prosedur_penyidikan_kuhp",
+            "patterns": [
+                "Bagaimana prosedur penyidikan dalam KUHP diatur?",
+                "Alur prosedur penyidikan tindak pidana",
+                "Jelaskan prosedur penyidikan untuk tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "proses_penuntutan_kuhp",
+            "patterns": [
+                "Bagaimana KUHP mengatur proses penuntutan terhadap tindak pidana?",
+                "Jelaskan proses penuntutan terhadap tindak pidana",
+                "Prosedur proses penuntutan dalam kasus tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "aturan_persidangan_kuhp",
+            "patterns": [
+                "Jelaskan aturan persidangan untuk kasus tindak pidana KUHP",
+                "Aturan persidangan kasus tindak pidana KUHP",
+                "Apa saja aturan persidangan kasus tindak pidana dalam KUHP?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pembuktian_persidangan_kuhp",
+            "patterns": [
+                "Aturan pembuktian dalam persidangan tindak pidana menurut KUHP",
+                "Bagaimana aturan mengenai pembuktian dalam persidangan pidana menurut KUHP?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "penjatuhan_hukuman_kuhp",
+            "patterns": [
+                "Bagaimana ketentuan mengenai penjatuhan hukuman dalam KUHP?",
+                "Aturan penjatuhan hukuman dalam KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "prosedur_eksekusi_hukuman_kuhp",
+            "patterns": [
+                "Bagaimana prosedur eksekusi hukuman diatur dalam KUHP?",
+                "Jelaskan prosedur eksekusi hukuman kasus tindak pidana menurut hukum pidana KUHP",
+                "Prosedur eksekusi hukuman kasus tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pemidanaan_anak_kuhp",
+            "patterns": [
+                "Pemidanaan anak menurut hukum pidana KUHP",
+                "Bagaimana ketentuan mengenai pemidanaan anak diatur dalam KUHP ini?",
+                "Aturan pemidanaan anak"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "alternatif_hukuman_penjara_kuhp",
+            "patterns": [
+                "Bagaimana KUHP mengatur mengenai alternatif hukuman selain penjara?",
+                "Jelaskan alternatif hukuman penjara untuk kasus tindak pidana",
+                "Alternatif hukuman penjara untuk kasus tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pelaksanaan_hukuman_mati_kuhp",
+            "patterns": [
+                "Bagaimana pelaksanaan hukuman mati menurut hukum pidana KUHP",
+                "Aturan pelaksanaan hukuman mati menurut hukum pidana KUHP",
+                "Jelaskan pelaksanaan hukuman mati kasus tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "hukuman_penjara_kuhp",
+            "patterns": [
+                "Bagaimana ketentuan mengenai hukuman penjara diatur dalam KUHP?",
+                "Hukuman penjara untuk kasus tindak pidana dalam KUHP",
+                "Peraturan hukuman penjara untuk kasus tindak pidana dalam hukum pidana KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "hukuman_denda_kuhp",
+            "patterns": [
+                "Bagaimana ketentuan mengenai hukuman denda diatur dalam KUHP?",
+                "Ketentuan hukuman denda untuk kasus tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "hukuman_kerja_sosial_kuhp",
+            "patterns": [
+                "Apa yang diatur mengenai kerja sosial sebagai bentuk hukuman dalam KUHP?",
+                "Hukuman kerja sosial sebagai bentuk hukuman tindak pidana KUHP",
+                "Jelaskan peraturan hukuman kerja sosial menurut hukum pidana KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "hukuman_pengawasan_kuhp",
+            "patterns": [
+                "Bagaimana KUHP mengatur hukuman pengawasan?",
+                "Hukuman pengawasan untuk kasus tindak pidana",
+                "Jelaskan peraturan hukuman pengawasan kasus tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "rehabilitasi_narapidana_kuhp",
+            "patterns": [
+                "Bagaimana KUHP mengatur mengenai rehabilitasi bagi narapidana?",
+                "Rehabilitasi bagi narapidana kasus tindak pidana",
+                "Jelaskan mengenai rehabilitasi untuk narapidana kasus tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "rehabilitasi_korban_tindak_pidana_kuhp",
+            "patterns": [
+                "Apa ketentuan mengenai rehabilitasi bagi korban tindak pidana dalam KUHP?",
+                "Rehabilitasi korban tindak pidana",
+                "Jelaskan peraturan mengenai rehabilitasi korban tindak pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "penghapusan_pidana_kuhp",
+            "patterns": [
+                "Bagaimana ketentuan mengenai penghapusan pidana diatur dalam KUHP?",
+                "Peraturan mengenai penghapusan pidana menurut hukum pidana KUHP",
+                "Penghapusan pidana kasus hukum pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "kodisi_penghapusan_pidana_kuhp",
+            "patterns": [
+                "Apa saja kondisi yang dapat menyebabkan penghapusan pidana menurut KUHP?",
+                "Jelaskan ketentuan kondisi yang menyebabkan penghapusan pidana"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "grasi_kuhp",
+            "patterns": [
+                "Bagaimana hukum pidana KUHP mengatur mengenai grasi?",
+                "Grasi dalam kasus tindak pidana",
+                "Jelaskan peraturan grasi dalam kasus tindak pidana menurut hukum pidana KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "amnesti_kuhp",
+            "patterns": [
+                "Bagaimana hukum pidana KUHP mengatur mengenai amnesti?",
+                "Amnesti dalam kasus hukum pidana",
+                "Jelaskan peraturan amnesti dalam kasus tindak pidana menurut hukum pidana KUHP"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "peradilan_pidana_khusus_kuhp",
+            "patterns": [
+                "Bagaimana hukum pidana KUHP mengatur mengenai peradilan pidana khusus?",
+                "Peraturan mengenai peradilan pidana khusus",
+                "Jelaskan peraturan peradilan pidana khusus"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "korupsi_peradilan_pidana_khusus_kuhp",
+            "patterns": [
+                "Bagaimana ketentuan mengenai tindak pidana korupsi diatur dalam peradilan pidana khusus menurut KUHP ini?",
+                "Korupsi dalam peradilan pidana khusus",
+                "Jelaskan peraturan mengenai korupsi dalam peradilan pidana khusus"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pidana_narkotika_kuhp",
+            "patterns": [
+                "Bagaimana hukum pidana KUHP mengatur tindak pidana narkotika?",
+                "Tindak pidana narkotika",
+                "Jelaskan peraturan mengenai tindak pidana narkotika"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "perdagangan_orang_kuhp",
+            "patterns": [
+                "Bagaimana hukum pidana KUHP mengatur tindak pidana perdagangan orang?",
+                "Tindak pidana perdagangan orang",
+                "Jelaskan peraturan mengenai tindak pidana perdagangan orang"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pencucian_uang_kuhp",
+            "patterns": [
+                "Bagaimana hukum pidana KUHP mengatur tindak pidana pencucian uang?",
+                "Tindak pidana pencucian uang",
+                "Jelaskan peraturan mengenai tindak pidana pencucian uang"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pelanggaran_hak_cipta_kuhp",
+            "patterns": [
+                "Bagaimana hukum pidana KUHP mengatur tindak pidana pelanggaran hak cipta?",
+                "Kasus pelanggaran hak cipta menurut hukum pidana KUHP",
+                "Jelaskan tindak pidana pencucian uang"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        }
     ]
 }
